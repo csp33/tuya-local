@@ -6,6 +6,12 @@ products:
   - id: g4coy3ffpt7nzchu
     manufacturer: Faroro
     model: PF50
+  - id: vglnuveujzyrpku9
+    manufacturer: Arespark
+    model: PF50
+  - id: g4coy3ffpt7nzchu
+    manufacturer: Arespark
+    model: PF50
 entities:
   - entity: number
     translation_key: manual_feed
@@ -49,14 +55,17 @@ entities:
         name: sensor
         type: integer
         optional: true
-  - entity: sensor
+  - entity: number
     name: Voice times
     icon: "mdi:account-voice"
     category: config
     dps:
       - id: 18
-        name: sensor
+        name: value
         type: integer
+        range:
+          min: 0
+          max: 5
   - entity: switch
     name: Indicator light
     icon: "mdi:lightbulb"
